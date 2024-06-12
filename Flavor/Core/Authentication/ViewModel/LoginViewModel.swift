@@ -25,7 +25,7 @@ class LoginViewModel: ObservableObject {
         do {
             try await authService.login(withEmail: email, password: password)
         } catch {
-            print("DEBUG APP: Did fai to log in with error \(error.localizedDescription)")
+            print("DEBUG APP: Did faito log in with error \(error.localizedDescription)")
             DispatchQueue.main.async {
                             self.errorMsg = error.localizedDescription
                             self.error = true
